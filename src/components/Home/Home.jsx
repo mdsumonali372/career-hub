@@ -1,12 +1,14 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
+import Header from "../Header/Header";
 
 const Home = () => {
   const data = useLoaderData();
   console.log(data);
   return (
     <div>
-      <h4>wORKING</h4>
+      <Header></Header>
+      <Outlet></Outlet>
     </div>
   );
 };
