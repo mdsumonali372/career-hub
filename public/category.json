@@ -2,7 +2,7 @@
   {
     "id": 1,
     "category_name": "Engineering",
-    "category_logo": "path/to/logo1.png",
+    "category_logo": "https://img.freepik.com/free-icon/computer_318-923993.jpg?size=626&ext=jpg&ga=GA1.1.2052780206.1681078998&semt=sph",
     "jobs_available": [
       {
         "id": 1,
@@ -30,7 +30,7 @@
   {
     "id": 2,
     "category_name": "Marketing",
-    "category_logo": "path/to/logo2.png",
+    "category_logo": "https://cdn-icons-png.flaticon.com/512/1253/1253767.png?w=740&t=st=1681079111~exp=1681079711~hmac=f20ea4525e37fd6c25620b8d99b95ca677133db5705a4043010017bb17bf0e3f",
     "jobs_available": [
       {
         "id": 4,
@@ -51,7 +51,7 @@
   {
     "id": 3,
     "category_name": "Finance",
-    "category_logo": "path/to/logo3.png",
+    "category_logo": "https://cdn-icons-png.flaticon.com/512/726/726204.png?w=740&t=st=1681079157~exp=1681079757~hmac=4f76bf527b8b1172c5d57ac9066fe7cc9f6598e2dd81c716df0cacb126d28d35",
     "jobs_available": [
       {
         "id": 6,
@@ -72,7 +72,7 @@
   {
     "id": 4,
     "category_name": "Design",
-    "category_logo": "path/to/logo4.png",
+    "category_logo": "https://cdn-icons-png.flaticon.com/512/552/552222.png?w=740&t=st=1681079519~exp=1681080119~hmac=9af1a1304d3283a10d2cd1fe5e6c803e8cca86aab5d42b16024a1db1e33a9119",
     "jobs_available": [
       {
         "id": 8,
