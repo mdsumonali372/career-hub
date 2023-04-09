@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "category_name": "Engineering",
+    "category_logo": "path/to/logo1.png",
+    "jobs_available": [
+      {
+        "id": 1,
+        "title": "Software Engineer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "San Francisco, CA",
+        "salary": "$120,000 - $150,000"
+      },
+      {
+        "id": 2,
+        "title": "Hardware Engineer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "Austin, TX",
+        "salary": "$100,000 - $130,000"
+      },
+      {
+        "id": 3,
+        "title": "Data Scientist",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "New York, NY",
+        "salary": "$130,000 - $160,000"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category_name": "Marketing",
+    "category_logo": "path/to/logo2.png",
+    "jobs_available": [
+      {
+        "id": 4,
+        "title": "Social Media Manager",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "Los Angeles, CA",
+        "salary": "$70,000 - $90,000"
+      },
+      {
+        "id": 5,
+        "title": "Brand Manager",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "Chicago, IL",
+        "salary": "$90,000 - $110,000"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category_name": "Finance",
+    "category_logo": "path/to/logo3.png",
+    "jobs_available": [
+      {
+        "id": 6,
+        "title": "Financial Analyst",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000"
+      },
+      {
+        "id": 7,
+        "title": "Investment Banker",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "London, UK",
+        "salary": "$120,000 - $150,000"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category_name": "Design",
+    "category_logo": "path/to/logo4.png",
+    "jobs_available": [
+      {
+        "id": 8,
+        "title": "Graphic Designer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "Los Angeles, CA",
+        "salary": "$60,000 - $80,000"
+      },
+      {
+        "id": 9,
+        "title": "UX Designer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "San Francisco, CA",
+        "salary": "$100,000 - $120,000"
+      },
+      {
+        "id": 10,
+        "title": "Industrial Designer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "location": "Paris, France",
+        "salary": "$90,000 - $110,000"
+      }
+    ]
+  }
+]
