@@ -6,4 +6,6 @@
 
 - Feature job fetch loader and show the ui
 
+- Feature job deatils show the ui
+
 * [biker-zone](https://mdsumonali372.github.io/PH-Project/biker-zone/)

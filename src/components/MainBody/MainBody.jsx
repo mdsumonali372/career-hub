@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import CategoryList from "../CategoryList/CategoryList";
 import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
 
 const MainBody = () => {
   // jobs data loader
-  const jobsData = useLoaderData();
+  // const jobsData = useLoaderData();
+  const [job, setJob] = useState({ jobs: [] });
+  useEffect(() => {
+    fetch("job.json")
+      .then((res) => res.json())
+      .then((data) => setJob(data));
+  }, []);
+
   //   category data fetch
   const [category, setCategory] = useState([]);
   useEffect(() => {
@@ -60,7 +66,7 @@ const MainBody = () => {
           need. Its your future
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          {jobsData.jobs.map((job) => (
+          {job.jobs.map((job) => (
             <FeaturedJobs key={job.id} job={job}></FeaturedJobs>
           ))}
         </div>

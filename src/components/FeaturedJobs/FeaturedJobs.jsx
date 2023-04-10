@@ -1,8 +1,9 @@
 import { CurrencyDollarIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import React from "react";
-
+import { Link } from "react-router-dom";
 const FeaturedJobs = ({ job }) => {
   const {
+    id,
     company_logo,
     job_title,
     company_name,
@@ -35,9 +36,11 @@ const FeaturedJobs = ({ job }) => {
           {salary}
         </span>
       </address>
-      <button className="btn btn-info mt-10 text-white font-extrabold">
-        View Details
-      </button>
+      <Link to={`/featuredJobDetails/${id}`}>
+        <button className="btn btn-info mt-10 text-white font-extrabold">
+          View Details
+        </button>
+      </Link>
     </div>
   );
 };
