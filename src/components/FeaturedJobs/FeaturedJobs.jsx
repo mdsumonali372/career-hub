@@ -21,12 +21,14 @@ const FeaturedJobs = ({ job }) => {
       <p className="text-xl text-[#757575] font-semibold mt-2 mb-4">
         {company_name}
       </p>
-      <button className="btn btn-outline btn-primary">
-        {remote_or_onsite}
-      </button>
-      <button className="btn btn-outline btn-primary ml-4">
-        {fulltime_or_parttime}
-      </button>
+      <div className="flex">
+        <button className="btn btn-outline btn-primary">
+          {remote_or_onsite}
+        </button>
+        <button className="btn btn-outline btn-primary ml-4">
+          {fulltime_or_parttime}
+        </button>
+      </div>
       <address className="mt-6 md:flex gap-4">
         <span className="flex items-center gap-2 text-xl text-[#757575] font-semibold">
           <MapPinIcon className="w-5 h-5 text-[#757575]" /> {location}

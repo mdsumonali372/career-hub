@@ -75,7 +75,7 @@ const FeaturedJobDetails = () => {
             {experiences}
           </p>
         </div>
-        <div className="md:w-1/3">
+        <div className="md:w-1/3 mt-2 md:mt-0">
           <div className="bg-gradient-to-r from-[#f3f2ff] to-[#f4f2ff] p-4  rounded-lg">
             <h4 className="text-xl text-[#1A1919] font-extrabold">
               Job Details
@@ -102,7 +102,7 @@ const FeaturedJobDetails = () => {
               Contact Information
             </h4>
             <hr className="border-1 border-[#d3d1ff] mt-3" />
-            <div className="mt-4">
+            <div className="mt-4 w-full">
               <p className=" text-[#757575] font-medium flex gap-1">
                 <span>
                   <PhoneIcon className="w-5 h-5 text-[#7E90FE]" />
@@ -110,7 +110,7 @@ const FeaturedJobDetails = () => {
                 <span className="text-[#474747] font-bold">Phone:</span>
                 {contact_information?.phone}
               </p>
-              <p className="mt-4 text-[#757575] font-medium flex gap-1">
+              <p className="mt-4 text-[#757575] font-medium flex flex-wrap gap-1">
                 <span>
                   <EnvelopeIcon className="w-5 h-5 text-[#7E90FE]" />
                 </span>
