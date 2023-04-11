@@ -36,6 +36,7 @@ const FeaturedJobDetails = () => {
       toast("Already Applied the job");
     } else {
       storedNumber.push(jobId);
+      toast("Applied Done");
     }
     localStorage.setItem("jobId", JSON.stringify(storedNumber));
   };
