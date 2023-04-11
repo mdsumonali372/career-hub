@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const AppliedJobsData = ({ jobData }) => {
   const {
+    id,
     company_logo,
     job_title,
     company_name,
@@ -16,7 +17,7 @@ const AppliedJobsData = ({ jobData }) => {
   return (
     <div className="border-2 border-[#E8E8E8] p-8 flex items-center mb-4 rounded-lg gap-4">
       <div className="w-1/4 h-full bg-[#F4F4F4] p-10 rounded-lg">
-        <img className="w-3/4 h-28" src={company_logo} alt="" />
+        <img className="w-3/4 h-28 mx-auto" src={company_logo} alt="" />
       </div>
       <div className="flex justify-between w-3/4">
         <div>
@@ -47,7 +48,7 @@ const AppliedJobsData = ({ jobData }) => {
           </div>
         </div>
         <div>
-          <Link to={`/featuredJobDetails`}>
+          <Link to={`/featuredJobDetails/${id}`}>
             <button className="btn btn-info mt-10 text-white font-extrabold">
               View Details
             </button>

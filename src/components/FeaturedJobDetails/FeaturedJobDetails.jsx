@@ -6,6 +6,7 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/solid";
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useLoaderData, useParams } from "react-router-dom";
 const FeaturedJobDetails = () => {
   const data = useLoaderData();
@@ -32,7 +33,7 @@ const FeaturedJobDetails = () => {
     let storedNumber = JSON.parse(localStorage.getItem("jobId")) || [];
     const exist = storedNumber.find((sn) => sn == jobId);
     if (exist) {
-      alert("already added");
+      toast("Already Applied the job");
     } else {
       storedNumber.push(jobId);
     }
