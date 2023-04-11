@@ -38,6 +38,10 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
+        path: "footer",
+        element: <Element></Element>,
+      },
+      {
         path: "*",
         element: <Error></Error>,
       },
