@@ -5,6 +5,7 @@ import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
 const MainBody = () => {
   // jobs data loader
   const [job, setJob] = useState({ jobs: [] });
+  const [showAll, setShowAll] = useState(false);
   useEffect(() => {
     fetch("job.json")
       .then((res) => res.json())
@@ -18,6 +19,9 @@ const MainBody = () => {
       .then((res) => res.json())
       .then((data) => setCategory(data));
   }, []);
+  const handleShowAll = () => {
+    setShowAll(true);
+  };
   return (
     <div className="mb-20">
       <div className="md:flex justify-between items-center mx-auto bg-[#f9f9ff] px-14">
@@ -65,10 +69,16 @@ const MainBody = () => {
           need. Its your future
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          {job.jobs.map((job) => (
+          {job.jobs.slice(0, showAll ? 6 : 4).map((job) => (
             <FeaturedJobs key={job.id} job={job}></FeaturedJobs>
           ))}
         </div>
+        <button
+          onClick={handleShowAll}
+          className="btn btn-info mt-10 text-white mx-auto block"
+        >
+          Sell All Jobs
+        </button>
       </div>
     </div>
   );
