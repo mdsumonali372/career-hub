@@ -4,7 +4,6 @@ import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
 
 const MainBody = () => {
   // jobs data loader
-  // const jobsData = useLoaderData();
   const [job, setJob] = useState({ jobs: [] });
   useEffect(() => {
     fetch("job.json")

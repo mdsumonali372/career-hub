@@ -9,10 +9,9 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 const FeaturedJobDetails = () => {
   const data = useLoaderData();
-  //   console.log(data.jobs);
   const [details, setDeatils] = useState({});
-  console.log(details);
   const {
+    id,
     job_description,
     job_responsibility,
     educational_requirements,
@@ -22,13 +21,23 @@ const FeaturedJobDetails = () => {
     contact_information,
     location,
   } = details;
-  console.log(location);
   const dynamic = useParams();
-  const dynamicId = dynamic.jobId;
+  const jobId = dynamic.jobId;
   useEffect(() => {
-    const singleDetails = data.jobs?.find((dt) => dt.id == dynamicId);
+    const singleDetails = data.jobs?.find((dt) => dt.id == jobId);
     setDeatils(singleDetails);
   }, []);
+
+  const applyJob = (id) => {
+    let storedNumber = JSON.parse(localStorage.getItem("jobId")) || [];
+    const exist = storedNumber.find((sn) => sn == jobId);
+    if (exist) {
+      alert("already added");
+    } else {
+      storedNumber.push(jobId);
+    }
+    localStorage.setItem("jobId", JSON.stringify(storedNumber));
+  };
 
   return (
     <div className="mb-10">
@@ -64,53 +73,64 @@ const FeaturedJobDetails = () => {
             {experiences}
           </p>
         </div>
-        <div className="bg-gradient-to-r from-[#f3f2ff] to-[#f4f2ff] p-4 md:w-1/3 rounded-lg">
-          <h4 className="text-xl text-[#1A1919] font-extrabold">Job Details</h4>
-          <hr className="border-1 border-[#d3d1ff] mt-3" />
-          <div>
-            <p className="mt-4 text-[#757575] font-medium flex gap-1">
-              <span>
-                <CurrencyDollarIcon className="w-5 h-5 text-[#7E90FE]" />
-              </span>
-              <span className="text-[#474747] font-bold">Salary:</span>
-              {salary}
-              (Per Month)
-            </p>
-            <p className="mt-4 text-[#757575] font-medium flex gap-1">
-              <span>
-                <BriefcaseIcon className="w-5 h-5 text-[#7E90FE]" />
-              </span>
-              <span className="text-[#474747] font-bold">Job Title:</span>
-              {job_title} (Per Month)
-            </p>
+        <div className="md:w-1/3">
+          <div className="bg-gradient-to-r from-[#f3f2ff] to-[#f4f2ff] p-4  rounded-lg">
+            <h4 className="text-xl text-[#1A1919] font-extrabold">
+              Job Details
+            </h4>
+            <hr className="border-1 border-[#d3d1ff] mt-3" />
+            <div>
+              <p className="mt-4 text-[#757575] font-medium flex gap-1">
+                <span>
+                  <CurrencyDollarIcon className="w-5 h-5 text-[#7E90FE]" />
+                </span>
+                <span className="text-[#474747] font-bold">Salary:</span>
+                {salary}
+                (Per Month)
+              </p>
+              <p className="mt-4 text-[#757575] font-medium flex gap-1">
+                <span>
+                  <BriefcaseIcon className="w-5 h-5 text-[#7E90FE]" />
+                </span>
+                <span className="text-[#474747] font-bold">Job Title:</span>
+                {job_title}
+              </p>
+            </div>
+            <h4 className="text-xl text-[#1A1919] font-extrabold mt-8">
+              Contact Information
+            </h4>
+            <hr className="border-1 border-[#d3d1ff] mt-3" />
+            <div className="mt-4">
+              <p className=" text-[#757575] font-medium flex gap-1">
+                <span>
+                  <PhoneIcon className="w-5 h-5 text-[#7E90FE]" />
+                </span>
+                <span className="text-[#474747] font-bold">Phone:</span>
+                {contact_information?.phone}
+              </p>
+              <p className="mt-4 text-[#757575] font-medium flex gap-1">
+                <span>
+                  <EnvelopeIcon className="w-5 h-5 text-[#7E90FE]" />
+                </span>
+                <span className="text-[#474747] font-bold">Email:</span>
+                {contact_information?.email}
+              </p>
+              <p className="mt-4 text-[#757575] font-medium flex gap-1">
+                <span>
+                  <MapPinIcon className="w-5 h-5 text-[#7E90FE]" />
+                </span>
+                <span className="text-[#474747] font-bold">Address:</span>
+                {location}
+              </p>
+            </div>
           </div>
-          <h4 className="text-xl text-[#1A1919] font-extrabold mt-8">
-            Contact Information
-          </h4>
-          <hr className="border-1 border-[#d3d1ff] mt-3" />
-          <div className="mt-4">
-            <p className=" text-[#757575] font-medium flex gap-1">
-              <span>
-                <PhoneIcon className="w-5 h-5 text-[#7E90FE]" />
-              </span>
-              <span className="text-[#474747] font-bold">Phone:</span>
-              {contact_information?.phone}
-            </p>
-            <p className="mt-4 text-[#757575] font-medium flex gap-1">
-              <span>
-                <EnvelopeIcon className="w-5 h-5 text-[#7E90FE]" />
-              </span>
-              <span className="text-[#474747] font-bold">Email:</span>
-              {contact_information?.email}
-            </p>
-            <p className="mt-4 text-[#757575] font-medium flex gap-1">
-              <span>
-                <MapPinIcon className="w-5 h-5 text-[#7E90FE]" />
-              </span>
-              <span className="text-[#474747] font-bold">Address:</span>
-              {location}
-            </p>
-          </div>
+
+          <button
+            onClick={() => applyJob(id)}
+            className="btn bg-[#8885fe] border-0 w-full mt-4"
+          >
+            Apply Now
+          </button>
         </div>
       </div>
     </div>
