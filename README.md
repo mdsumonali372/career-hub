@@ -10,4 +10,6 @@
 
 - appliedjobs components load data and get localstorage id and find the id and pass the data featureJobDetails component
 
+- Statistics components here added SimpleAreaChart
+
 * [biker-zone](https://mdsumonali372.github.io/PH-Project/biker-zone/)
