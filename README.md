@@ -12,4 +12,6 @@
 
 - Statistics components here added SimpleAreaChart
 
-* [biker-zone](https://mdsumonali372.github.io/PH-Project/biker-zone/)
+-
+
+* [b7a9-career-hub-mdsumonali372](https://assignment9-career-sumon.netlify.app/)
