@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppliedJobs from "./components/AppliedJobs/AppliedJobs";
 import Blog from "./components/Blog/Blog";
+import Error from "./components/Error/Error";
 import FeaturedJobDetails from "./components/FeaturedJobDetails/FeaturedJobDetails";
 import Home from "./components/Home/Home";
 import MainBody from "./components/MainBody/MainBody";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "*",
+        element: <Error></Error>,
       },
     ],
   },
