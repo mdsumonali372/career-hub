@@ -18,7 +18,6 @@ const AppliedJobs = () => {
   useEffect(() => {
     setSingleJob(saveJob);
   }, []);
-
   // handleJobTime code here
   const handleJobTime = (options) => {
     const optionValue = options.target.value;
@@ -31,7 +30,6 @@ const AppliedJobs = () => {
         setSingleJob(jobTime);
       }
     } else if (optionValue == "Part-time") {
-      console.log(optionValue);
       let jobTime = [];
       for (const singleJobTime of saveJob) {
         if (singleJobTime.fulltime_or_parttime == "Part-time") {
@@ -40,7 +38,7 @@ const AppliedJobs = () => {
         setSingleJob(jobTime);
       }
     } else {
-      console.log("nothing applied job show here");
+      console.log("Your are not applied the job");
     }
   };
 

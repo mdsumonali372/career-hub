@@ -21,11 +21,11 @@ const FeaturedJobs = ({ job }) => {
       <p className="text-xl text-[#757575] font-semibold mt-2 mb-4">
         {company_name}
       </p>
-      <div className="flex">
-        <button className="btn btn-outline btn-primary">
+      <div className="md:flex flex-wrap items-center">
+        <button className="btn btn-outline btn-primary block">
           {remote_or_onsite}
         </button>
-        <button className="btn btn-outline btn-primary ml-4">
+        <button className="btn btn-outline btn-primary md:ml-4 mt-2 md:mt-0 block">
           {fulltime_or_parttime}
         </button>
       </div>
