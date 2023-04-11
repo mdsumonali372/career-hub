@@ -22,7 +22,7 @@ const MainBody = () => {
     <div className="mb-20">
       <div className="md:flex justify-between items-center mx-auto bg-[#f9f9ff] px-14">
         <div className="md:w-1/2">
-          <h2 className="text-5xl text-[#1A1919] font-bold">
+          <h2 className="text-2xl md:text-5xl text-[#1A1919] font-bold">
             The first step is to figure out exactly what your dream job is.
           </h2>
           <p className="mt-6 text-xl text-[#757575] font-medium">
@@ -39,7 +39,7 @@ const MainBody = () => {
       </div>
       {/* category list start here */}
       <div className="px-14 my-32">
-        <h2 className="text-5xl text-[#1A1919] font-extrabold text-center">
+        <h2 className="text-2xl md:text-5xl text-[#1A1919] font-extrabold text-center">
           Job Category List
         </h2>
         <p className="text-xl text-[#757575] font-medium mt-4 text-center">
@@ -57,7 +57,7 @@ const MainBody = () => {
       </div>
       {/* feature job start here */}
       <div className="px-14">
-        <h2 className="text-5xl text-[#1A1919] font-extrabold text-center">
+        <h2 className="text-2xl md:text-5xl text-[#1A1919] font-extrabold text-center">
           Featured Jobs
         </h2>
         <p className="text-xl text-[#757575] font-medium text-center mt-4">

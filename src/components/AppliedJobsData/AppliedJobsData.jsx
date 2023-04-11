@@ -15,13 +15,13 @@ const AppliedJobsData = ({ jobData }) => {
   } = jobData;
 
   return (
-    <div className="border-2 border-[#E8E8E8] p-8 flex items-center mb-4 rounded-lg gap-4">
-      <div className="w-1/4 h-full bg-[#F4F4F4] p-10 rounded-lg">
-        <img className="w-3/4 h-28 mx-auto" src={company_logo} alt="" />
+    <div className="border-2 border-[#E8E8E8] p-8 md:flex items-center mb-4 rounded-lg gap-4">
+      <div className=" md:w-1/4 md:h-full bg-[#F4F4F4] p-10 rounded-lg">
+        <img className="md:w-3/4 md:h-28 mx-auto" src={company_logo} alt="" />
       </div>
-      <div className="flex justify-between w-3/4">
+      <div className="md:flex justify-between md:w-3/4">
         <div>
-          <h3 className="text-2xl text-[#474747] font-extrabold">
+          <h3 className="text-2xl text-[#474747] font-extrabold mt-3 md:mt-0">
             {job_title}
           </h3>
           <h4 className="text-2xl text-[#757575] font-semibold mt-2">

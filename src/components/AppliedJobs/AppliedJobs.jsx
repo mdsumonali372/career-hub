@@ -19,8 +19,6 @@ const AppliedJobs = () => {
     setSingleJob(saveJob);
   }, []);
 
-  // console.log(singleJob);
-
   // handleJobTime code here
   const handleJobTime = (options) => {
     const optionValue = options.target.value;

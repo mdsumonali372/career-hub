@@ -52,9 +52,9 @@ const Statistics = () => {
     },
   ];
   return (
-    <div className="mt-20">
+    <div className="mt-20 w-full mb-20">
       <AreaChart
-        width={500}
+        width={480}
         height={400}
         data={data}
         margin={{

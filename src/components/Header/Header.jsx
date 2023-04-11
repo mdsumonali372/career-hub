@@ -27,7 +27,7 @@ const Header = () => {
           </div>
         </div>
         <div
-          className={`flex md:flex-row flex-col justify-around items-center text-xl w-1/2 mt-5 md:mt-0 ${
+          className={`flex md:flex-row flex-col gap-y-4 justify-around items-center text-xl w-1/2 mt-5 md:mt-0 ${
             open ? "ml-0 w-1/2" : "-ml-96"
           }`}
         >
