@@ -30,11 +30,12 @@ const FeaturedJobs = ({ job }) => {
         </button>
       </div>
       <address className="mt-6 md:flex gap-4">
-        <span className="flex items-center gap-2 text-xl text-[#757575] font-semibold text-[12px]">
-          <MapPinIcon className="w-5 h-5 text-[#757575]" /> {location}
+        <span className="flex items-center gap-2 md:text-xl text-[#757575] font-semibold text-[12px]">
+          <MapPinIcon className="w-3 h-3 md:w-5 md:h-5 text-[#757575]" />{" "}
+          {location}
         </span>
-        <span className="flex items-center gap-2 text-xl text-[#757575] font-semibold text-[12px]">
-          <CurrencyDollarIcon className="w-5 h-5 text-[#757575]" />
+        <span className="flex items-center gap-2 md:text-xl text-[#757575] font-semibold text-[12px]">
+          <CurrencyDollarIcon className="w-3 h-3 md:w-5 md:h-5 text-[#757575]" />
           {salary}
         </span>
       </address>

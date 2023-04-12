@@ -24,7 +24,7 @@ const AppliedJobsData = ({ jobData }) => {
           <h3 className="md:text-2xl text-[#474747] font-extrabold mt-3 md:mt-0">
             {job_title}
           </h3>
-          <h4 className="text-2xl text-[#757575] font-semibold mt-2">
+          <h4 className="text-xs md:text-2xl text-[#757575] font-semibold mt-2">
             {company_name}
           </h4>
           <div className="mt-4 mb-6">
