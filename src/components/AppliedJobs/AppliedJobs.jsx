@@ -18,8 +18,8 @@ const AppliedJobs = () => {
   useEffect(() => {
     setSingleJob(saveJob);
   }, []);
-  // handleJobTime code here
-  const handleJobTime = (options) => {
+  // handleRemote Onsite code here
+  const handleRemoteOnsite = (options) => {
     const optionValue = options.target.value;
     if (optionValue == "Remote") {
       let jobOnRemote = [];
@@ -38,8 +38,38 @@ const AppliedJobs = () => {
         setSingleJob(jobOnRemote);
       }
     } else {
-      console.log("Your are not applied the job");
+      alert("Your are not applied the job");
     }
+  };
+
+  // handleremove job time
+  const handleJobTime = (optionChange) => {
+    const optionChangeValue = optionChange.target.value;
+    if (optionChangeValue == "Full-time") {
+      let jobTime = [];
+      for (const singleJobTime of saveJob) {
+        if (singleJobTime.fulltime_or_parttime == "Full-time") {
+          jobTime.push(singleJobTime);
+        }
+        setSingleJob(jobTime);
+      }
+    } else if (optionChangeValue == "Part-time") {
+      let jobTime = [];
+      for (const singleJobTime of saveJob) {
+        if (singleJobTime.fulltime_or_parttime == "Part-time") {
+          jobTime.push(singleJobTime);
+        }
+        setSingleJob(jobTime);
+      }
+    } else {
+      alert("something wrong");
+    }
+  };
+
+  // ShowAllJob
+
+  const ShowAllJob = () => {
+    setSingleJob(saveJob);
   };
 
   return (
@@ -49,10 +79,21 @@ const AppliedJobs = () => {
           Applied Jobs
         </h2>
       </div>
-      <div className="flex justify-end px-14 mt-32">
+      <div className="flex justify-end px-14 mt-32 gap-3">
+        <button onClick={ShowAllJob} className="btn">
+          All
+        </button>
         <select
           onChange={handleJobTime}
           className="bg-[#F4F4F4] py-2 outline-0"
+        >
+          <option>Filter By</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+        </select>
+        <select
+          onChange={handleRemoteOnsite}
+          className="bg-[#F4F4F4] py-2 outline-0 ml-4"
         >
           <option>Filter By</option>
           <option value="Remote">Remote</option>

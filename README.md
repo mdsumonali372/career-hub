@@ -12,6 +12,8 @@
 
 - Statistics components here added SimpleAreaChart
 
--
+- handleRemoteOnsite the function filter by remote and onsite data
+
+- handleJobTime the function filter by full-time and Part-time filter data
 
 * [b7a9-career-hub-mdsumonali372](https://assignment9-career-sumon.netlify.app/)
