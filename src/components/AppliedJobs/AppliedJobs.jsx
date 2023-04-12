@@ -21,21 +21,21 @@ const AppliedJobs = () => {
   // handleJobTime code here
   const handleJobTime = (options) => {
     const optionValue = options.target.value;
-    if (optionValue == "Full-time") {
-      let jobTime = [];
-      for (const singleJobTime of saveJob) {
-        if (singleJobTime.fulltime_or_parttime == "Full-time") {
-          jobTime.push(singleJobTime);
+    if (optionValue == "Remote") {
+      let jobOnRemote = [];
+      for (const remoteOnsite of saveJob) {
+        if (remoteOnsite.remote_or_onsite == "Remote") {
+          jobOnRemote.push(remoteOnsite);
         }
-        setSingleJob(jobTime);
+        setSingleJob(jobOnRemote);
       }
-    } else if (optionValue == "Part-time") {
-      let jobTime = [];
-      for (const singleJobTime of saveJob) {
-        if (singleJobTime.fulltime_or_parttime == "Part-time") {
-          jobTime.push(singleJobTime);
+    } else if (optionValue == "Onsite") {
+      let jobOnRemote = [];
+      for (const remoteOnsite of saveJob) {
+        if (remoteOnsite.remote_or_onsite == "Onsite") {
+          jobOnRemote.push(remoteOnsite);
         }
-        setSingleJob(jobTime);
+        setSingleJob(jobOnRemote);
       }
     } else {
       console.log("Your are not applied the job");
@@ -55,8 +55,8 @@ const AppliedJobs = () => {
           className="bg-[#F4F4F4] py-2 outline-0"
         >
           <option>Filter By</option>
-          <option value="Full-time">Full Time</option>
-          <option value="Part-time">Part Time</option>
+          <option value="Remote">Remote</option>
+          <option value="Onsite">Onsite</option>
         </select>
       </div>
       <div className="px-14 mt-8">
