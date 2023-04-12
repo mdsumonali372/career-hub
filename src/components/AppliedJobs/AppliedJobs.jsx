@@ -79,13 +79,13 @@ const AppliedJobs = () => {
           Applied Jobs
         </h2>
       </div>
-      <div className="flex justify-end px-14 mt-32 gap-3">
-        <button onClick={ShowAllJob} className="btn">
+      <div className="md:flex mx-auto text-center justify-end px-14 mt-32 gap-3">
+        <button onClick={ShowAllJob} className="btn block">
           All
         </button>
         <select
           onChange={handleJobTime}
-          className="bg-[#F4F4F4] py-2 outline-0"
+          className="bg-[#F4F4F4] py-2 mt-2 md:mt-0 outline-0 block"
         >
           <option>Filter By</option>
           <option value="Full-time">Full-time</option>
@@ -93,7 +93,7 @@ const AppliedJobs = () => {
         </select>
         <select
           onChange={handleRemoteOnsite}
-          className="bg-[#F4F4F4] py-2 outline-0 ml-4"
+          className="bg-[#F4F4F4] py-2 outline-0 mt-4 md:mt-0 md:ml-4 block"
         >
           <option>Filter By</option>
           <option value="Remote">Remote</option>

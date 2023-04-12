@@ -15,7 +15,7 @@ const FeaturedJobs = ({ job }) => {
   return (
     <div className="border-2 border-[#E8E8E8] p-10">
       <img className="w-44 h-32" src={company_logo} alt="" />
-      <h2 className="text-3xl text-[#474747] font-extrabold mt-8">
+      <h2 className="md:text-3xl text-[#474747] font-extrabold mt-8">
         {job_title}
       </h2>
       <p className="text-xl text-[#757575] font-semibold mt-2 mb-4">
@@ -30,10 +30,10 @@ const FeaturedJobs = ({ job }) => {
         </button>
       </div>
       <address className="mt-6 md:flex gap-4">
-        <span className="flex items-center gap-2 text-xl text-[#757575] font-semibold">
+        <span className="flex items-center gap-2 text-xl text-[#757575] font-semibold text-[12px]">
           <MapPinIcon className="w-5 h-5 text-[#757575]" /> {location}
         </span>
-        <span className="flex items-center gap-2 text-xl text-[#757575] font-semibold">
+        <span className="flex items-center gap-2 text-xl text-[#757575] font-semibold text-[12px]">
           <CurrencyDollarIcon className="w-5 h-5 text-[#757575]" />
           {salary}
         </span>

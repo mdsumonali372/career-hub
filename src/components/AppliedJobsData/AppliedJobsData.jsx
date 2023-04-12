@@ -21,7 +21,7 @@ const AppliedJobsData = ({ jobData }) => {
       </div>
       <div className="md:flex justify-between md:w-3/4">
         <div>
-          <h3 className="text-2xl text-[#474747] font-extrabold mt-3 md:mt-0">
+          <h3 className="md:text-2xl text-[#474747] font-extrabold mt-3 md:mt-0">
             {job_title}
           </h3>
           <h4 className="text-2xl text-[#757575] font-semibold mt-2">
@@ -31,20 +31,24 @@ const AppliedJobsData = ({ jobData }) => {
             <button className="btn btn-outline btn-primary">
               {remote_or_onsite}
             </button>
-            <button className="btn btn-outline btn-primary ml-4">
+            <button className="btn btn-outline btn-primary mt-2 md:mt-0 md:ml-4">
               {fulltime_or_parttime}
             </button>
           </div>
-          <div className="flex items-center gap-3 ">
+          <div className="md:flex items-center gap-3 ">
             {" "}
-            <span>
-              <MapPinIcon className="w-5 h-5 text-[#7E90FE]" />
-            </span>
-            <span>{location}</span>{" "}
-            <span>
-              <CurrencyDollarIcon className="w-5 h-5 text-[#7E90FE]" />
-            </span>{" "}
-            <span> {salary}</span>{" "}
+            <div className="flex items-center gap-2">
+              <span>
+                <MapPinIcon className="w-3 h-3 md:w-5 md:h-5 text-[#7E90FE]" />
+              </span>
+              <span className="text-[10px] md:text-xl">{location}</span>{" "}
+            </div>
+            <div className="flex items-center gap-2">
+              <span>
+                <CurrencyDollarIcon className="w-3 h-3 md:w-5 md:h-5 text-[#7E90FE]" />
+              </span>{" "}
+              <span className="text-[10px] md:text-xl"> {salary}</span>{" "}
+            </div>
           </div>
         </div>
         <div>

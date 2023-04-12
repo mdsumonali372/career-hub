@@ -5,7 +5,7 @@ const Blog = () => {
     <div className="mb-20">
       <div className="bg-gradient-to-r from-[#f9f9ff] to-[#faf8ff] py-36">
         <h2 className="text-center text-3xl text-[#1A1919] font-extrabold">
-          Applied Jobs
+          Blogs
         </h2>
       </div>
       <div className="px-14 mt-20 grid grid-cols-1 md:grid-cols-4 gap-4">
